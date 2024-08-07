@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Знайди середнє арифметичне трьох чисел</p>
+    <button id="btn">Почали!</button>
+    <p>Результат: <span id="result"></span></p>
+    <script>
+      document.querySelector("#btn").onclick = function () {
+        let variant1 = +prompt("Введіть перше число");
+        let variant2 = +prompt("Введіть друге число");
+        let variant3 = +prompt("Введіть третє число");
+
+        let result = (variant1 + variant2 + variant3) / 3;
+        document.querySelector("#result").innerHTML = result.toFixed(2);
+      };
+    </script>
+  </body>
+</html>

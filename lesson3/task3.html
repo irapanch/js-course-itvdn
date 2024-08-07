@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Введіть значення для перетворення:</p>
+    <input type="text" id="val" />
+    <button id="cs">У градуси Цельсія</button>
+    <button id="fg">У градуси по Фаренгейту</button>
+    <p id="output"></p>
+
+    <script>
+      document.querySelector("#cs").onclick = function () {
+        let tempFg = +document.querySelector("#val").value;
+        let tempCs = (5 / 9) * (tempFg - 32);
+        showResult(tempCs);
+      };
+
+      document.querySelector("#fg").onclick = function () {
+        let tempCs = +document.querySelector("#val").value;
+        let tempFg = (9 / 5) * tempCs + 32;
+        showResult(tempFg);
+      };
+      function showResult(res) {
+        document.querySelector("#output").innerHTML =
+          res.toFixed(2) + " градуси";
+      }
+    </script>
+  </body>
+</html>
