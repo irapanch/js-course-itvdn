@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let randomNumber = Math.floor(Math.random() * 100) + 1;
+      let randomNumber = 50;
+      let userNumber = +prompt("Введіть число від 1 до 100");
+      function getNumber(number) {
+        if (!number) {
+          userNumber = +prompt(
+            "Ви ввели некоректне число. Спробуйте ще раз! Введіть число від 1 до 100 "
+          );
+          getNumber(userNumber);
+        } else if (number < 1 || number > 100) {
+          userNumber = +prompt(
+            `Упс.. Нажаль. ваше число ${number} не входить в діапазон. Спробуйте ще раз! Введіть число від 1 до 100 `
+          );
+          getNumber(userNumber);
+        } else if (number < randomNumber) {
+          userNumber = +prompt(
+            `Упс.. Нажаль. ваше число ${number} менше, ніж загадане.. Спробуйте ще раз! Введіть число від 1 до 100`
+          );
+          getNumber(userNumber);
+        } else if (number > randomNumber) {
+          userNumber = +prompt(
+            `Упс.. Нажаль. ваше число ${number} більше, ніж загадане.. Спробуйте ще раз! Введіть число від 1 до 100`
+          );
+          getNumber(userNumber);
+        } else if (number === randomNumber) {
+          alert("Вітаємо!! Ви відгадали число " + randomNumber);
+        }
+      }
+      getNumber(userNumber);
+    </script>
+  </body>
+</html>

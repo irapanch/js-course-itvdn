@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let initialValue = "Дідсс";
+      let value = initialValue.replace(/\s+/g, "").toLowerCase().trim(); //прибираємо всі пробіли й табуляції, приводимо до одного регістру, видаляємммо пробіли праворуч/ліворуч
+      let len = value.length - 1;
+      let isPalindrom;
+      for (i = 0; i < len / 2; i++) {
+        if (value[i] !== value[len - i]) {
+          isPalindrom = false;
+          break;
+        }
+        isPalindrom = true;
+      }
+      if (isPalindrom) {
+        console.log(`Вираз ${initialValue} є паліндромом`);
+      } else {
+        console.log(`Вираз ${initialValue} не є паліндромом`);
+      }
+    </script>
+  </body>
+</html>
