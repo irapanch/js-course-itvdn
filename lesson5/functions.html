@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let result;
+      // function-declaration                функція оголошення
+      function add(a, b) {
+        let temp = a + b;
+        return temp;
+      }
+      result = add(5, 7);
+
+      // named function-expression           іменована функція-вираз
+      let add1 = function add(a, b) {
+        return a + b;
+      };
+      result = add1(10, 20);
+
+      // anonym function-expression          анонімна  функція-вираз
+      let add2 = function (arg1, arg2) {
+        return a + b;
+      };
+      result = add2(1, 2);
+
+      // arrow function  (expression)              стрілочна функція (вираз)
+      let add3 = (arg1, arg2) => arg1 * arg2;
+      result = add3(1, 2);
+    </script>
+  </body>
+</html>
