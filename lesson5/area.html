@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../common/library.js"></script>
+    <script>
+      function getCircleArea(radius) {
+        return Math.PI * Math.pow(radius, 2);
+      }
+      function getCirclePerimeter(radius) {
+        return 2 * Math.PI * radius;
+      }
+
+      let radius = getNumericValue("Введіть радіус");
+      let area = getCircleArea(radius).toFixed(2);
+      let perimeter = getCirclePerimeter(radius).toFixed(2);
+      function result(area, perimeter) {
+        alert(`Площа круга: ${area}  Периметр кола: ${perimeter} `);
+      }
+      result(area, perimeter);
+      // let result = (area, perimeter) =>
+      //   alert(`Площа круга: ${area}  Периметр кола: ${perimeter} `);
+    </script>
+  </body>
+</html>
