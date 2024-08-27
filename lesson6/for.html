@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cities = ["London", "Kyiv", "Roma"];
+
+      //   for   Цикл що перебирає всі значення за індексом
+      for (let index = 0; index < cities.length; index++) {
+        const city = cities[index];
+        console.log(city); // London Kyiv  Roma
+      }
+      //   for in   Цикл що перебирає всі значення за назвами властивостей, тобто індексом, т.я. це - масив
+      for (const prop in cities) {
+        console.log(prop); // 0 1 2
+        // console.log(cities[prop]); // London Kyiv  Roma
+      }
+
+      //  for of  цикл працює з колекціями.  взяти об'єккт і витягнути з нього всі значення
+      for (const city of cities) {
+        console.log(city); // London Kyiv  Roma
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let values = [5, 7, 4, -10, 3, -11, 100, 2, -6, 0];
+      for (let i = 0; i < values.length; i++) {
+        if (values[i] < 0) {
+          values[i] = 0;
+        }
+      }
+
+      //   ---------  рефакторинг в стрілочну функцію
+      //   function createNewArr(value, index) {
+      //     console.log(`index ${index} = ${value}`);
+      //   }
+
+      values.forEach((value, index) =>
+        console.log(`index ${index} = ${value}`)
+      );
+    </script>
+  </body>
+</html>
